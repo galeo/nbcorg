@@ -25,9 +25,8 @@ class OrgmodeExporter(TemplateExporter):
         return 'base.tpl'
 
     @property
-    def template_path(self):
-        bp = super(OrgmodeExporter, self).template_path
-        return bp  + [os.path.join(os.path.dirname(__file__), "templates")]
+    def extra_template_paths(self):
+        return [os.path.join(os.path.dirname(__file__), "templates")]
 
     @default('raw_mimetypes')
     def _raw_mimetypes_default(self):

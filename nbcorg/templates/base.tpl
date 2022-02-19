@@ -1,4 +1,4 @@
-{%- extends 'display_priority.tpl' -%}
+{%- extends 'base/display_priority.j2' -%}
 
 {% block header %}
 {%- set nb_title = nb.metadata.get('title', '') or resources['metadata']['name'] -%}
